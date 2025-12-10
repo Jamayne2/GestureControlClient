@@ -1,8 +1,3 @@
-
-Md Shad <mss464@cornell.edu>
-10:57 AM (4 hours ago)
-to me
-
 #include <stdio.h>
 #include "pico/stdlib.h"
 #include "hardware/i2c.h"
