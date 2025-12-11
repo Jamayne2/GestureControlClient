@@ -38,18 +38,6 @@ gesture_t detect_gesture(float ax, float ay, float az_ignored) {
         return g;
     }
 
-    // Left / Right
-    else if (abs_ax > THRESH_LR && abs_ax >= abs_ay) {
-        gesture_t g = (ax > 0) ? GESTURE_RIGHT : GESTURE_LEFT;
-        // Flip RIGHT/LEFT here if it feels backwards with your mounting
-
-        // DEBUG: print what caused this
-        // printf("[GESTURE LR] ax=%+.3f |ax|=%.3f |ay|=%.3f (TH_LR=%.2f)\n",
-        //        ax, abs_ax, abs_ay, THRESH_LR);
-
-        return g;
-    }
-
     // Nothing strong enough
     else {
         return GESTURE_NONE;
